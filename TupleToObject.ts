@@ -1,6 +1,6 @@
 const tuple = ['tesla', 'model 3', 'model X', 'model Y'] as const
 
-type TupleToObject<T extends readonly string[]> = {
+type TupleToObject<T extends readonly PropertyKey[]> = {
   [K in T[number]]: K
 }
 
